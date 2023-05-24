@@ -17,6 +17,7 @@ import mrIn from './locales/mr-IN';
 import ptBR from './locales/pt-BR';
 import trTr from './locales/tr-TR';
 import nlSr from './locales/nl-SR';
+import viVn from './locales/vi-VN';
 
 export const DefaultConverterOptions: ConverterOptions = {
   currency: false,
@@ -78,6 +79,10 @@ export class ToWords {
         return trTr;
       case 'nl-SR':
         return nlSr;
+      case 'vi':
+        return viVn;
+      default:
+        return 'en-IN';
     }
     /* eslint-enable @typescript-eslint/no-var-requires */
     throw new Error(`Unknown Locale "${this.options.localeCode}"`);
